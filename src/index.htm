@@ -1,16 +1,44 @@
 <!doctype html>
 <html lang="en-US">
+
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <title>Coding Template</title>
   <link rel="stylesheet" type="text/css" href="bundle.css">
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+
 </head>
 
 <body>
-  <h1>Webpack - TypeScript - Scss</h1>
-  <h2>TypeScript Hello World</h2>  
-  <div id="content"></div>
-    
+  <h1>String manipulation</h1>
+
+  <div class="container-fluid" id="app">
+    <div class="row">
+
+      <div class="col-sm-3">
+        <label for="StringM">String manipulation box</label>
+      </div>
+
+      <div class="col-sm-3">
+        <input type="text" v-model="inputMessage" placeholder="Write something...">
+      </div>
+
+      <div class="col-sm-3">
+        <button v-on:click="uppercase()">UPPERCASE</button>
+        <button v-on:click="lowercase()">lowercase</button>
+      </div>
+
+      {{outputMessage}}
+
+
+    </div>
+
+  </div>
+
+
   <script src="bundle.js"></script>
 </body>
+
 </html>
